@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="app_name">Starting New Activity</string>
+    <string name="title_activity_child">Child Activity</string>
+</resources>
