@@ -2,6 +2,7 @@ package com.example.startingnewactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String message = "Button clicked!\nTODO: Start a new Activity and pass some data...";
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(MainActivity.this, ChildActivity.class);
+                intent.putExtra("data", mNameEntry.getText().toString());
+                startActivity(intent);
             }
         });
 
